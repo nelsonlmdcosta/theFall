@@ -29,6 +29,11 @@ public class CustomLR : MonoBehaviour
 
     }
 
+	public void SetMaterial(Material material)
+	{
+		GetComponent<MeshRenderer>().material = material;
+	}
+
     public void SetPosition(int i, Vector3 position)
 	{
 		positions[i] = position;

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LineCreate : MonoBehaviour 
 {
+	public Material material;
+
 	CustomLR line;
 
 	int colliderID = 0;
@@ -68,6 +70,7 @@ public class LineCreate : MonoBehaviour
 					{
 						currentLineObject = new GameObject("LineRenderer", typeof(CustomLR));
 						line = currentLineObject.GetComponent<CustomLR>();
+						line.SetMaterial(material);
 
 						//line.SetWidth(0.1f, 0.1f);
 						line.SetPosition(0, hit.collider.transform.position + new Vector3(0,0.15f,0));
