@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ApplicationCalls : MonoBehaviour
 {
@@ -12,10 +11,7 @@ public class ApplicationCalls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene(0);
-
-            
+			Application.LoadLevel(0);
         }
     }
-
 }
